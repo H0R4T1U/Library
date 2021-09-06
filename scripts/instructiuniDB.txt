@@ -1,0 +1,5 @@
+To add books to the database add them to the books.txt file following this model:
+book_name author_name location extra
+eg: Crime_and_Punishment Feodor_Dostoievski Bottom_Shelf Borrowed
+then run the 'runscript' command:
+python manage.py runscript populateDB

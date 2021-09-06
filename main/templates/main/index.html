@@ -1,0 +1,50 @@
+{% extends "main/layout.html" %}    
+{% block body %}
+
+<div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        ID
+                    </th>
+                    <th scope="col">
+                        Titlu
+                    </th>
+                    <th scope="col">
+                        Autor
+                    </th>
+                    <th scope="col">
+                        Locatie
+                    </th>
+                    <th scope="col">
+                        Extra
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                    <tr>
+                        <td>
+                            {{book.id}}
+                        </td>
+                        <td>
+                            {{ book.name }}
+                        </td>
+                        <td>
+                            {{ book.author }}
+                        </td>
+                        <td>
+                            {{ book.location }}
+                        </td>
+                        <td>
+                            {{book.extra}}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}
